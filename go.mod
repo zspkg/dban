@@ -3,12 +3,13 @@ module github.com/zspkg/dban
 go 1.18
 
 require (
+	github.com/Masterminds/squirrel v1.4.0
+	github.com/fatih/structs v1.1.0
 	gitlab.com/distributed_lab/kit v1.11.2
 	gitlab.com/distributed_lab/logan v3.8.1+incompatible
 )
 
 require (
-	github.com/Masterminds/squirrel v1.4.0 // indirect
 	github.com/fsnotify/fsnotify v1.4.7 // indirect
 	github.com/getsentry/sentry-go v0.7.0 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
