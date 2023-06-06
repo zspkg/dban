@@ -1,8 +1,10 @@
 package dban
 
-import "testing"
+import (
+	"testing"
+)
 
+// TODO: To be implemented
 func TestKV(t *testing.T) {
-	t.Log("To be implemented")
 	return
 }
