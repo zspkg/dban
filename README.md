@@ -1,4 +1,5 @@
 # dban
+[![Go Report Card](https://goreportcard.com/badge/github.com/zspkg/dban)](https://goreportcard.com/report/github.com/zspkg/dban)
 
 Helpful tools for working with the `postgres` database. Currently, `dban` includes:
 
