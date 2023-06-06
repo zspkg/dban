@@ -2,7 +2,7 @@ package dban
 
 import "testing"
 
+// TODO: to be implemented
 func TestStreamer(t *testing.T) {
-	t.Log("To be implemented")
 	return
 }

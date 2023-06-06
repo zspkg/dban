@@ -7,15 +7,18 @@ import (
 	"gitlab.com/distributed_lab/kit/pgdb"
 )
 
+// KeyValue is an object stored in the key value storage
 type KeyValue struct {
 	Key   string `db:"key" structs:"key"`
 	Value string `db:"value" structs:"value"`
 }
 
+// KeyValueQ is an interface for querying a key value storage
 //go:generate mockery --case=underscore --name=KeyValueQ
 type KeyValueQ interface {
+	// New creates a new instance of an interface with all filters cleared
 	New() KeyValueQ
-
+	// Get is a function to get a value from the storage based on the key
 	Get(key string) (*KeyValue, error)
 	// Upsert updates value if there is one, insert if no
 	Upsert(KeyValue) error
@@ -37,6 +40,7 @@ type keyValueQ struct {
 	db *pgdb.DB
 }
 
+// NewKeyValueQ creates a new instance of a key value querier
 func NewKeyValueQ(db *pgdb.DB) KeyValueQ {
 	return &keyValueQ{
 		db: db,
